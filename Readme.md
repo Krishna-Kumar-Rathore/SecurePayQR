@@ -12,10 +12,31 @@ AI-powered QR code fraud detection system using CNN-LSTM deep learning architect
 
 ## Tech Stack
 
-**Backend**: Python, PyTorch, FastAPI, PostgreSQL, Redis, ONNX Runtime
+**Backend**: Python, PyTorch, FastAPI, MongoDB, Docker 
 **Frontend**: React, Tailwind CSS, WebRTC Camera API
-**Infrastructure**: Docker, Nginx, Prometheus, Grafana
-**ML Pipeline**: PyTorch training, ONNX export, automated model deployment
+**Infrastructure**: Docker
+**ML Pipeline**: PyTorch training, automated model deployment
+
+
+## Project Structure
+
+```
+SecurePayQR/
+├── src/                          # Python source code
+│   ├── fastapi_backend.py        # API backend
+│   ├── cnn_lstm_model.py         # ML model architecture
+│   ├── training_pipeline.py     # Model training
+│   └── dataset_creation_script.py # Dataset generation
+├── frontend/                     # React frontend
+│   ├── src/components/           # React components
+│   └── src/context/              # State management
+├── config/                       # Configuration files
+├── tests/                        # Test suite
+├── monitoring/                   # Prometheus & Grafana configs
+├── docker-compose.yml            # Docker services
+├── requirements.txt              # Python dependencies
+└── .env                          # Environment variables
+```
 
 ## Quick Start
 
@@ -106,25 +127,9 @@ curl -X POST "http://localhost:8000/detect" \
 }
 ```
 
-## Project Structure
 
-```
-SecurePayQR/
-├── src/                          # Python source code
-│   ├── fastapi_backend.py        # API backend
-│   ├── cnn_lstm_model.py         # ML model architecture
-│   ├── training_pipeline.py     # Model training
-│   └── dataset_creation_script.py # Dataset generation
-├── frontend/                     # React frontend
-│   ├── src/components/           # React components
-│   └── src/context/              # State management
-├── config/                       # Configuration files
-├── tests/                        # Test suite
-├── monitoring/                   # Prometheus & Grafana configs
-├── docker-compose.yml            # Docker services
-├── requirements.txt              # Python dependencies
-└── .env                          # Environment variables
-```
+
+
 
 ## Model Architecture
 
