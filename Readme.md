@@ -1,17 +1,10 @@
 # SecurePayQR: AI-Powered QR Code Fraud Detection
 
-🔒 **Advanced CNN-LSTM based QR code tampering detection for secure digital payments**
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.103+-green.svg)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org)
-[![MongoDB](https://img.shields.io/badge/MongoDB-6.0+-green.svg)](https://mongodb.com)
-[![Docker](https://img.shields.io/badge/Docker-24.0+-blue.svg)](https://docker.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## 🚀 Overview
 
-SecurePayQR is a production-ready fraud detection system that combines deep learning and computer vision to identify tampered QR codes in real-time. The system uses a novel CNN-LSTM hybrid architecture to analyze both spatial features and sequential patterns in QR codes, achieving 96.2% accuracy in detecting various tampering attacks.
+SecurePayQR is a fraud detection system that combines deep learning and computer vision to identify tampered QR codes in real-time. The system uses a novel CNN-LSTM hybrid architecture to analyze both spatial features and sequential patterns in QR codes, achieving high accuracy in detecting various tampering attacks.
 
 ### Key Features
 
@@ -52,6 +45,51 @@ graph TB
 | **Reverse Proxy** | Nginx | Load balancing and SSL |
 
 ## 🔧 Quick Start
+
+## 📁 Project Structure
+
+```
+securepayqr/
+├── 🐳 docker-compose.yml          # Multi-service orchestration
+├── 🐳 Dockerfile                  # Multi-stage container builds
+├── 📋 requirements.txt            # Python dependencies
+├── 📊 README.md                   # This file
+│
+├── 🧠 src/                        # Source code
+│   ├── cnn_lstm_model.py         # Core ML model architecture
+│   ├── training_pipeline.py      # Model training orchestration
+│   ├── dataset_creation_script.py # Synthetic data generation
+│   ├── fastapi_backend.py        # REST API server
+│   └── mongodb_backend.py        # MongoDB integration
+│
+├── ⚛️ frontend/                   # React.js frontend
+│   ├── src/
+│   │   ├── components/           # React components
+│   │   ├── context/             # State management
+│   │   └── App.js              # Main application
+│   ├── public/                  # Static assets
+│   └── package.json            # Frontend dependencies
+│
+├── 🧪 tests/                     # Test suites
+│   ├── test_framework.py        # Comprehensive testing
+│   ├── test_api.py              # API endpoint tests
+│   ├── test_models.py           # Model unit tests
+│   ├── test_integration.py      # End-to-end tests
+│   └── test_performance.py      # Performance benchmarks
+│
+├── 🚀 scripts/                   # Deployment automation
+│   ├── deploy.sh                # Main deployment script
+│   └── init_mongo.js            # Database initialization
+│
+├── 📊 monitoring/                # Observability stack
+│   ├── prometheus/              # Metrics collection
+│   └── grafana/                 # Visualization dashboards
+│
+└── 🔧 nginx/                     # Reverse proxy configuration
+    ├── nginx.conf               # Main configuration
+    └── default.conf             # Site configuration
+```
+
 
 ### Prerequisites
 
@@ -111,49 +149,6 @@ cp .env.example .env
 - ✅ Gradient overlay attacks
 - ✅ Logo/watermark insertion
 
-## 📁 Project Structure
-
-```
-securepayqr/
-├── 🐳 docker-compose.yml          # Multi-service orchestration
-├── 🐳 Dockerfile                  # Multi-stage container builds
-├── 📋 requirements.txt            # Python dependencies
-├── 📊 README.md                   # This file
-│
-├── 🧠 src/                        # Source code
-│   ├── cnn_lstm_model.py         # Core ML model architecture
-│   ├── training_pipeline.py      # Model training orchestration
-│   ├── dataset_creation_script.py # Synthetic data generation
-│   ├── fastapi_backend.py        # REST API server
-│   └── mongodb_backend.py        # MongoDB integration
-│
-├── ⚛️ frontend/                   # React.js frontend
-│   ├── src/
-│   │   ├── components/           # React components
-│   │   ├── context/             # State management
-│   │   └── App.js              # Main application
-│   ├── public/                  # Static assets
-│   └── package.json            # Frontend dependencies
-│
-├── 🧪 tests/                     # Test suites
-│   ├── test_framework.py        # Comprehensive testing
-│   ├── test_api.py              # API endpoint tests
-│   ├── test_models.py           # Model unit tests
-│   ├── test_integration.py      # End-to-end tests
-│   └── test_performance.py      # Performance benchmarks
-│
-├── 🚀 scripts/                   # Deployment automation
-│   ├── deploy.sh                # Main deployment script
-│   └── init_mongo.js            # Database initialization
-│
-├── 📊 monitoring/                # Observability stack
-│   ├── prometheus/              # Metrics collection
-│   └── grafana/                 # Visualization dashboards
-│
-└── 🔧 nginx/                     # Reverse proxy configuration
-    ├── nginx.conf               # Main configuration
-    └── default.conf             # Site configuration
-```
 
 ## 🚀 Usage
 
